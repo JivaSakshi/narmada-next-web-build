@@ -1,5 +1,6 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Heart, Users, GraduationCap, TreePine, Shield, CreditCard, Smartphone, Building } from 'lucide-react';
+import { Heart, Users, GraduationCap, TreePine, Shield, CreditCard, Smartphone, Building, Copy, QrCode } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -13,7 +14,7 @@ const Donation = () => {
     },
     {
       amount: 2000,
-      title: "Advocate",
+      title: "Advocate", 
       impact: "Sponsors a child's education for 1 month",
       popular: true
     },
@@ -65,6 +66,20 @@ const Donation = () => {
       percentage: 70
     }
   ];
+
+  const bankDetails = {
+    accountName: "Narmadalaya Charitable Trust",
+    accountNumber: "987654321012",
+    ifscCode: "SBIN0012345",
+    bankName: "State Bank of India",
+    branchName: "Sangamner Branch",
+    upiId: "narmadalaya@sbi"
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+    // You could add a toast notification here
+  };
 
   return (
     <>
@@ -171,8 +186,136 @@ const Donation = () => {
           </div>
         </section>
 
-        {/* Impact Areas */}
+        {/* Bank Details & QR Code */}
         <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Bank Transfer <span className="text-orange-600">Details</span>
+              </h2>
+              <p className="text-xl text-gray-600">
+                You can also make direct bank transfers or UPI payments
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {/* Bank Details */}
+              <Card className="border-0 shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-center">Bank Account Details</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <div className="text-sm text-gray-600">Account Name</div>
+                      <div className="font-medium">{bankDetails.accountName}</div>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard(bankDetails.accountName)}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <div className="text-sm text-gray-600">Account Number</div>
+                      <div className="font-medium">{bankDetails.accountNumber}</div>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard(bankDetails.accountNumber)}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <div className="text-sm text-gray-600">IFSC Code</div>
+                      <div className="font-medium">{bankDetails.ifscCode}</div>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard(bankDetails.ifscCode)}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <div>
+                      <div className="text-sm text-gray-600">Bank & Branch</div>
+                      <div className="font-medium">{bankDetails.bankName}, {bankDetails.branchName}</div>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
+                    <div>
+                      <div className="text-sm text-orange-600">UPI ID</div>
+                      <div className="font-medium text-orange-700">{bankDetails.upiId}</div>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard(bankDetails.upiId)}
+                    >
+                      <Copy className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* QR Code */}
+              <Card className="border-0 shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-center">UPI QR Code</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <div className="bg-white p-8 rounded-lg border-2 border-dashed border-gray-300 mb-6">
+                    <QrCode className="h-48 w-48 mx-auto text-gray-400" />
+                    <p className="text-sm text-gray-500 mt-4">Scan with any UPI app</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <p className="text-lg font-medium text-gray-900">Scan & Pay with UPI</p>
+                    <p className="text-gray-600">
+                      Use Google Pay, PhonePe, Paytm, or any UPI app to scan and pay
+                    </p>
+                    
+                    <div className="grid grid-cols-3 gap-4 mt-6">
+                      <div className="text-center">
+                        <div className="bg-gray-100 p-3 rounded-lg mb-2">
+                          <Smartphone className="h-6 w-6 mx-auto text-gray-600" />
+                        </div>
+                        <p className="text-xs text-gray-600">Google Pay</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-gray-100 p-3 rounded-lg mb-2">
+                          <Smartphone className="h-6 w-6 mx-auto text-gray-600" />
+                        </div>
+                        <p className="text-xs text-gray-600">PhonePe</p>
+                      </div>
+                      <div className="text-center">
+                        <div className="bg-gray-100 p-3 rounded-lg mb-2">
+                          <Smartphone className="h-6 w-6 mx-auto text-gray-600" />
+                        </div>
+                        <p className="text-xs text-gray-600">Paytm</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact Areas */}
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">

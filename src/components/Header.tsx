@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -41,7 +41,6 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Function to handle navigation and scroll to top
   const handleNavigation = () => {
     setIsOpen(false);
     window.scrollTo(0, 0);
@@ -84,8 +83,8 @@ const Header = () => {
                     Who We Are
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg">
-                      <ul className="grid w-[400px] gap-1 p-2">
+                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg min-w-max">
+                      <ul className="grid gap-1 p-4 w-80">
                         {whoWeAreItems.map((item) => (
                           <li key={item.href}>
                             <NavigationMenuLink asChild>
@@ -94,7 +93,7 @@ const Header = () => {
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600 text-gray-700"
                                 onClick={handleNavigation}
                               >
-                                <div className="text-sm font-medium">{item.title}</div>
+                                <div className="text-sm font-medium whitespace-nowrap">{item.title}</div>
                               </Link>
                             </NavigationMenuLink>
                           </li>
@@ -109,8 +108,8 @@ const Header = () => {
                     Current Activity
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg">
-                      <ul className="grid w-[300px] gap-1 p-2">
+                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg min-w-max">
+                      <ul className="grid gap-1 p-4 w-64">
                         {currentActivityItems.map((item) => (
                           <li key={item.href}>
                             <NavigationMenuLink asChild>
@@ -119,7 +118,7 @@ const Header = () => {
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600 text-gray-700"
                                 onClick={handleNavigation}
                               >
-                                <div className="text-sm font-medium">{item.title}</div>
+                                <div className="text-sm font-medium whitespace-nowrap">{item.title}</div>
                               </Link>
                             </NavigationMenuLink>
                           </li>
@@ -147,8 +146,8 @@ const Header = () => {
                     Achievement
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg">
-                      <ul className="grid w-[250px] gap-1 p-2">
+                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg min-w-max">
+                      <ul className="grid gap-1 p-4 w-52">
                         {achievementItems.map((item) => (
                           <li key={item.href}>
                             <NavigationMenuLink asChild>
@@ -157,7 +156,7 @@ const Header = () => {
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600 text-gray-700"
                                 onClick={handleNavigation}
                               >
-                                <div className="text-sm font-medium">{item.title}</div>
+                                <div className="text-sm font-medium whitespace-nowrap">{item.title}</div>
                               </Link>
                             </NavigationMenuLink>
                           </li>
