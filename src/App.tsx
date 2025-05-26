@@ -18,7 +18,9 @@ import WhatsNew from "./pages/WhatsNew";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import School from "./pages/School";
+import SchoolDetail from "./pages/SchoolDetail";
 import Awards from "./pages/Awards";
+import AwardDetail from "./pages/AwardDetail";
 import Sports from "./pages/Sports";
 import News from "./pages/News";
 import Donation from "./pages/Donation";
@@ -59,7 +61,9 @@ const App = () => (
               <Route path="/events" element={<Events />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/school" element={<School />} />
+              <Route path="/school-details" element={<SchoolDetail />} />
               <Route path="/awards" element={<Awards />} />
+              <Route path="/awards/:id" element={<AwardDetail />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/news" element={<News />} />
               <Route path="/donation" element={<Donation />} />

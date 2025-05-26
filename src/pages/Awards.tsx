@@ -1,11 +1,13 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Trophy, Medal, Star, Calendar, MapPin } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Award, Trophy, Medal, Star, Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Awards = () => {
   const awards = [
     {
+      id: "ngo-excellence-2024",
       title: "NGO Excellence Award 2024",
       organization: "Maharashtra NGO Federation",
       year: "2024",
@@ -17,6 +19,7 @@ const Awards = () => {
       featured: true
     },
     {
+      id: "educational-initiative-2023",
       title: "Best Educational Initiative Award",
       organization: "Education Ministry, Government of Maharashtra",
       year: "2023",
@@ -28,6 +31,7 @@ const Awards = () => {
       featured: false
     },
     {
+      id: "social-impact-2023",
       title: "Social Impact Recognition",
       organization: "Rotary Club International",
       year: "2023",
@@ -151,9 +155,20 @@ const Awards = () => {
                         <p className="text-lg text-orange-600 font-medium mb-4">{award.organization}</p>
                         <p className="text-gray-600 mb-4">{award.description}</p>
                         
-                        <div className="flex items-center text-gray-500 text-sm">
-                          <MapPin className="h-4 w-4 mr-1" />
-                          <span>{award.location}</span>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center text-gray-500 text-sm">
+                            <MapPin className="h-4 w-4 mr-1" />
+                            <span>{award.location}</span>
+                          </div>
+                          
+                          {award.id && (
+                            <Link to={`/awards/${award.id}`}>
+                              <Button variant="outline" size="sm" className="text-orange-600 border-orange-600 hover:bg-orange-50">
+                                View Details
+                                <ArrowRight className="h-4 w-4 ml-2" />
+                              </Button>
+                            </Link>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -206,12 +221,16 @@ const Awards = () => {
               Join us in creating more success stories and positive impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Support Our Mission
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all">
-                Become a Volunteer
-              </button>
+              <Link to="/donation">
+                <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 font-semibold">
+                  Support Our Mission
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 font-semibold">
+                  Become a Volunteer
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

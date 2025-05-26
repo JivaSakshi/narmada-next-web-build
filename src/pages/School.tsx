@@ -1,8 +1,8 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Users, BookOpen, Award, MapPin, Phone, Mail, Calendar } from 'lucide-react';
+import { GraduationCap, Users, BookOpen, Award, MapPin, Phone, Mail, Calendar, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const School = () => {
   const facilities = [
@@ -83,11 +83,17 @@ const School = () => {
               <p className="text-xl opacity-90 mb-8 animate-slide-up">
                 Empowering young minds through quality education and holistic development
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
                 <h3 className="text-2xl font-bold mb-4">Established 2018</h3>
-                <p className="text-lg opacity-90">
+                <p className="text-lg opacity-90 mb-6">
                   Providing free quality education to 350+ students from underprivileged backgrounds
                 </p>
+                <Link to="/school-details">
+                  <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 font-semibold">
+                    Explore School Details
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -253,7 +259,12 @@ const School = () => {
               </div>
             </div>
 
-            <div className="text-center mt-12">
+            <div className="text-center mt-12 space-x-4">
+              <Link to="/school-details">
+                <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 font-semibold">
+                  View Full Details
+                </Button>
+              </Link>
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3">
                 Schedule a Visit
               </Button>
