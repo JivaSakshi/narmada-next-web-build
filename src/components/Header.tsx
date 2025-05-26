@@ -41,12 +41,18 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Function to handle navigation and scroll to top
+  const handleNavigation = () => {
+    setIsOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3" onClick={handleNavigation}>
             <div className="h-10 w-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
               <Heart className="h-6 w-6 text-white" />
             </div>
@@ -67,52 +73,59 @@ const Header = () => {
                       "px-3 py-2 text-sm font-medium transition-colors hover:text-orange-600",
                       isActive("/") ? "text-orange-600" : "text-gray-700"
                     )}
+                    onClick={handleNavigation}
                   >
                     Home
                   </Link>
                 </NavigationMenuLink>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-orange-600">
                     Who We Are
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
-                      {whoWeAreItems.map((item) => (
-                        <li key={item.href}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={item.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600"
-                            >
-                              <div className="text-sm font-medium">{item.title}</div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg">
+                      <ul className="grid w-[400px] gap-1 p-2">
+                        {whoWeAreItems.map((item) => (
+                          <li key={item.href}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={item.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600 text-gray-700"
+                                onClick={handleNavigation}
+                              >
+                                <div className="text-sm font-medium">{item.title}</div>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-orange-600">
                     Current Activity
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[300px] gap-3 p-4">
-                      {currentActivityItems.map((item) => (
-                        <li key={item.href}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={item.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600"
-                            >
-                              <div className="text-sm font-medium">{item.title}</div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg">
+                      <ul className="grid w-[300px] gap-1 p-2">
+                        {currentActivityItems.map((item) => (
+                          <li key={item.href}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={item.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600 text-gray-700"
+                                onClick={handleNavigation}
+                              >
+                                <div className="text-sm font-medium">{item.title}</div>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
@@ -123,30 +136,34 @@ const Header = () => {
                       "px-3 py-2 text-sm font-medium transition-colors hover:text-orange-600",
                       isActive("/school") ? "text-orange-600" : "text-gray-700"
                     )}
+                    onClick={handleNavigation}
                   >
                     School
                   </Link>
                 </NavigationMenuLink>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-orange-600">
                     Achievement
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[250px] gap-3 p-4">
-                      {achievementItems.map((item) => (
-                        <li key={item.href}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={item.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600"
-                            >
-                              <div className="text-sm font-medium">{item.title}</div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="bg-white border border-gray-200 shadow-lg rounded-lg">
+                      <ul className="grid w-[250px] gap-1 p-2">
+                        {achievementItems.map((item) => (
+                          <li key={item.href}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={item.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-orange-50 hover:text-orange-600 text-gray-700"
+                                onClick={handleNavigation}
+                              >
+                                <div className="text-sm font-medium">{item.title}</div>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
@@ -157,6 +174,7 @@ const Header = () => {
                       "px-3 py-2 text-sm font-medium transition-colors hover:text-orange-600",
                       isActive("/donation") ? "text-orange-600" : "text-gray-700"
                     )}
+                    onClick={handleNavigation}
                   >
                     Donation
                   </Link>
@@ -169,6 +187,7 @@ const Header = () => {
                       "px-3 py-2 text-sm font-medium transition-colors hover:text-orange-600",
                       isActive("/contact") ? "text-orange-600" : "text-gray-700"
                     )}
+                    onClick={handleNavigation}
                   >
                     Contact
                   </Link>
@@ -177,7 +196,7 @@ const Header = () => {
             </NavigationMenu>
 
             <Button asChild className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">
-              <Link to="/donation">Donate Now</Link>
+              <Link to="/donation" onClick={handleNavigation}>Donate Now</Link>
             </Button>
           </div>
 
@@ -189,12 +208,12 @@ const Header = () => {
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white">
                 <div className="flex flex-col space-y-4 mt-8">
                   <Link
                     to="/"
                     className="text-lg font-medium py-2 border-b"
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleNavigation}
                   >
                     Home
                   </Link>
@@ -206,7 +225,7 @@ const Header = () => {
                         key={item.href}
                         to={item.href}
                         className="block pl-4 py-1 text-gray-600 hover:text-orange-600"
-                        onClick={() => setIsOpen(false)}
+                        onClick={handleNavigation}
                       >
                         {item.title}
                       </Link>
@@ -220,7 +239,7 @@ const Header = () => {
                         key={item.href}
                         to={item.href}
                         className="block pl-4 py-1 text-gray-600 hover:text-orange-600"
-                        onClick={() => setIsOpen(false)}
+                        onClick={handleNavigation}
                       >
                         {item.title}
                       </Link>
@@ -230,7 +249,7 @@ const Header = () => {
                   <Link
                     to="/school"
                     className="text-lg font-medium py-2 border-b"
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleNavigation}
                   >
                     School
                   </Link>
@@ -242,7 +261,7 @@ const Header = () => {
                         key={item.href}
                         to={item.href}
                         className="block pl-4 py-1 text-gray-600 hover:text-orange-600"
-                        onClick={() => setIsOpen(false)}
+                        onClick={handleNavigation}
                       >
                         {item.title}
                       </Link>
@@ -252,7 +271,7 @@ const Header = () => {
                   <Link
                     to="/donation"
                     className="text-lg font-medium py-2 border-b"
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleNavigation}
                   >
                     Donation
                   </Link>
@@ -260,13 +279,13 @@ const Header = () => {
                   <Link
                     to="/contact"
                     className="text-lg font-medium py-2 border-b"
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleNavigation}
                   >
                     Contact
                   </Link>
 
                   <Button asChild className="mt-4 bg-gradient-to-r from-orange-500 to-red-500">
-                    <Link to="/donation" onClick={() => setIsOpen(false)}>
+                    <Link to="/donation" onClick={handleNavigation}>
                       Donate Now
                     </Link>
                   </Button>

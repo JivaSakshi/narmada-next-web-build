@@ -70,37 +70,39 @@ const Team = () => {
       
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+        <section className="relative py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Team</h1>
               <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
                 Dedicated Professionals Committed to Social Change
               </p>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
         </section>
 
         {/* Team Stats */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="flex flex-col items-center">
-                <div className="bg-orange-500 p-4 rounded-full mb-4">
+              <div className="flex flex-col items-center animate-slide-up stagger-animation">
+                <div className="bg-orange-500 p-4 rounded-full mb-4 hover-glow">
                   <Users className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">50+</h3>
                 <p className="text-gray-600">Team Members</p>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="bg-orange-500 p-4 rounded-full mb-4">
+              <div className="flex flex-col items-center animate-slide-up stagger-animation">
+                <div className="bg-orange-500 p-4 rounded-full mb-4 hover-glow">
                   <Award className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">100+</h3>
                 <p className="text-gray-600">Years Combined Experience</p>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="bg-orange-500 p-4 rounded-full mb-4">
+              <div className="flex flex-col items-center animate-slide-up stagger-animation">
+                <div className="bg-orange-500 p-4 rounded-full mb-4 hover-glow">
                   <Heart className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">25,000+</h3>
@@ -113,7 +115,7 @@ const Team = () => {
         {/* Team Members */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Meet Our <span className="text-orange-600">Leadership Team</span>
               </h2>
@@ -125,12 +127,12 @@ const Team = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg overflow-hidden">
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg overflow-hidden hover-lift stagger-animation">
                   <div className="relative">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 left-4 right-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
@@ -170,16 +172,16 @@ const Team = () => {
             </div>
 
             {/* Join Our Team CTA */}
-            <div className="mt-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white text-center">
+            <div className="mt-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg p-8 text-white text-center animate-scale-in">
               <h3 className="text-3xl font-bold mb-4">Join Our Mission</h3>
               <p className="text-xl mb-6 opacity-90">
                 Are you passionate about making a difference? We're always looking for dedicated individuals to join our team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+                <button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105">
                   View Open Positions
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all hover:scale-105">
                   Volunteer With Us
                 </button>
               </div>
