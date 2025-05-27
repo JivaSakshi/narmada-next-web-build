@@ -1,8 +1,7 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Users, BookOpen, Award, MapPin, Phone, Mail, Calendar, Clock, TrendingUp, Heart } from 'lucide-react';
+import { GraduationCap, Users, BookOpen, Award, MapPin, Phone, Mail, Calendar, Clock, TrendingUp, Heart, Trophy } from 'lucide-react';
 
 const SchoolDetail = () => {
   const schoolInfo = {
