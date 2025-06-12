@@ -7,27 +7,39 @@ import { Button } from "@/components/ui/button";
 const Donation = () => {
   const donationTiers = [
     {
-      amount: 500,
-      title: "Supporter",
-      impact: "Provides school supplies for 1 child for a month",
-      popular: false
-    },
-    {
-      amount: 2000,
-      title: "Advocate", 
-      impact: "Sponsors a child's education for 1 month",
-      popular: true
-    },
-    {
       amount: 5000,
-      title: "Champion",
-      impact: "Funds a health checkup camp for 50 people",
+      title: "Supporter",
+      impact: "Sponsoring 2 pairs uniform, sweater, shoes and books & notebooks for one student a year.",
       popular: false
     },
     {
-      amount: 10000,
-      title: "Hero",
-      impact: "Provides vocational training for 5 adults",
+      amount: 15000,
+      title: "Studnet", 
+      impact: "Sponsoring school fees of one student a year.",
+      popular: false
+    },
+    {
+      amount: 20000,
+      title: "Teacher",
+      impact: " Sponsoring a teacher's average salary a month.",
+      popular: false
+    },
+    {
+      amount: 11000,
+      title: "Mid-day meals",
+      impact: "Sponsoring mid-day meals for students of Ramakrishna Sarda Niketan for one day",
+      popular: false
+    },
+    {
+      amount: 60000,
+      title: "Goshala",
+      impact: "Sponsoring Goshala a month.",
+      popular: false
+    },
+    {
+      amount: 60000,
+      title: "Cow",
+      impact: "Sponsoring cost of one original geer breed cow",
       popular: false
     }
   ];
@@ -68,11 +80,11 @@ const Donation = () => {
   ];
 
   const bankDetails = {
-    accountName: "Narmadalaya Charitable Trust",
-    accountNumber: "987654321012",
-    ifscCode: "SBIN0012345",
-    bankName: "State Bank of India",
-    branchName: "Sangamner Branch",
+    accountName: "Nimar Abhyudaya Rural Management And Development Association",
+    accountNumber: "31446799345",
+    ifscCode: "SBIN0030466",
+    bankName: "State Bank of India, Mandleshwar",
+    branchName: "30466",
     upiId: "narmadalaya@sbi"
   };
 
@@ -194,7 +206,9 @@ const Donation = () => {
                 Bank Transfer <span className="text-orange-600">Details</span>
               </h2>
               <p className="text-xl text-gray-600">
-                You can also make direct bank transfers or UPI payments
+                This Details and QR code only for Indian Donors </p>
+                 <p className="text-xl text-gray-600">
+यह जानकारी और QR कोड केवल भारत में निवास करने वाले भारतीय दानदाताओं के लिए |
               </p>
             </div>
 
@@ -250,14 +264,14 @@ const Donation = () => {
                   <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                     <div>
                       <div className="text-sm text-gray-600">Bank & Branch</div>
-                      <div className="font-medium">{bankDetails.bankName}, {bankDetails.branchName}</div>
+                      <div className="font-medium">{bankDetails.bankName}</div>
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg">
+                  <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                     <div>
-                      <div className="text-sm text-orange-600">UPI ID</div>
-                      <div className="font-medium text-orange-700">{bankDetails.upiId}</div>
+                      <div className="text-sm text-gray-600">Branch Code</div>
+                      <div className="font-medium">{bankDetails.branchName}</div>
                     </div>
                     <Button
                       variant="ghost"
@@ -315,7 +329,7 @@ const Donation = () => {
         </section>
 
         {/* Impact Areas */}
-        <section className="py-20">
+        {/* <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -366,7 +380,7 @@ const Donation = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Payment Methods */}
         <section className="py-20 bg-gray-50">
@@ -458,7 +472,7 @@ const Donation = () => {
                 <p className="opacity-90 mb-4">
                   Donate your time and skills to directly impact our programs
                 </p>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
+                <Button variant="outline" className="border-white text-orange-600 hover:bg-white hover:text-orange-600">
                   Join as Volunteer
                 </Button>
               </div>
@@ -469,7 +483,7 @@ const Donation = () => {
                 <p className="opacity-90 mb-4">
                   Share our mission on social media and with your network
                 </p>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
+                <Button variant="outline" className="border-white text-orange-600 hover:bg-white hover:text-orange-600">
                   Share Our Story
                 </Button>
               </div>
@@ -480,7 +494,7 @@ const Donation = () => {
                 <p className="opacity-90 mb-4">
                   Partner with us for CSR initiatives and employee engagement
                 </p>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
+                <Button variant="outline" className="border-white text-orange-600 hover:bg-white hover:text-orange-600">
                   Explore Partnership
                 </Button>
               </div>

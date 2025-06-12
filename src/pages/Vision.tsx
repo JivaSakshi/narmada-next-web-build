@@ -62,13 +62,11 @@ const Vision = () => {
                   <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  To create a world where every individual has equal access to education, healthcare, 
-                  and opportunities for personal growth, regardless of their socio-economic background.
+                  To build empowered and self-reliant communities in the Nimar region of Madhya Pradesh by ensuring equal access to education, livelihood, and environmental sustainability.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  We envision thriving communities where people live with dignity, children receive 
-                  quality education, and sustainable development practices ensure a better future 
-                  for generations to come.
+
+We envision a society where women and children lead with confidence, communities take ownership of their development, and inclusive education paves the way for a brighter, greener future.
                 </p>
               </div>
 
@@ -81,12 +79,11 @@ const Vision = () => {
                   <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  To empower underprivileged communities through comprehensive programs in education, 
-                  healthcare, environmental conservation, and skill development.
+                 To transform lives through integrated programs in education, vocational training, women’s empowerment, and environmental awareness.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  We are committed to building sustainable solutions that address root causes of 
-                  social challenges while fostering community ownership and long-term positive impact.
+
+We are dedicated to fostering sustainable development by addressing grassroots challenges, promoting community participation, and enabling individuals to achieve long-term self-sufficiency and dignity.
                 </p>
               </div>
             </div>

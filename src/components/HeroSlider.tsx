@@ -3,34 +3,40 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Heart, Users, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
+import slide1 from "../assets/images/slides/slider08.jpg";
+import slide2 from "../assets/images/slides/Childern03.jpg";
+import slide3 from "../assets/images/slides/desgin23.jpg";
+
+
+
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: slide1,
       title: "Empowering Communities Through Education",
       subtitle: "Building a brighter future for underprivileged children",
       description: "Join us in our mission to provide quality education and create opportunities for those who need it most.",
       cta: "Learn More",
-      link: "/school"
+      link: "#"
     },
     {
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
+      image: slide2,
       title: "Preserving Nature, Protecting Future",
       subtitle: "Environmental conservation for sustainable development",
       description: "Our commitment to environmental protection ensures a greener tomorrow for the next generation.",
       cta: "Our Projects",
-      link: "/events"
+      link: "#"
     },
     {
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: slide3,
       title: "Community Development Programs",
       subtitle: "Transforming lives through comprehensive care",
       description: "From healthcare to skill development, we're committed to holistic community empowerment.",
       cta: "Get Involved",
-      link: "/whats-new"
+      link: "#"
     }
   ];
 
@@ -94,7 +100,7 @@ const HeroSlider = () => {
                         asChild 
                         variant="outline" 
                         size="lg" 
-                        className="border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-6"
+                        className="border-white text-gray-900 hover:bg-white hover:text-gray-900 text-lg px-8 py-6"
                       >
                         <Link to="/donation">Donate Now</Link>
                       </Button>

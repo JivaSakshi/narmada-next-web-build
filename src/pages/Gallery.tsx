@@ -18,87 +18,87 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Students in Science Lab",
-      category: "education",
-      description: "Our students conducting experiments in the newly equipped science laboratory."
+      image: "https://www.narmadalaya.org/main/img/Memory_03.jpg",
+      title: "Appreciation",
+      category: "all",
+      description: "Appreciation of our work by Ex. President of India, Hon. Shrimati Pratibha Tai Patil."
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Community Health Camp",
-      category: "healthcare",
-      description: "Free medical checkup camp organized for rural communities."
+      image: "https://www.narmadalaya.org/main/img/events/shivir3.jpg",
+      title: "Narmada Swar Lahri",
+      category: "events",
+      description: "Narmada Jayanti Utsav - Lepa Punarvas."
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Tree Plantation Drive",
-      category: "environment",
-      description: "Volunteers participating in our annual tree plantation initiative."
+      image: "https://www.narmadalaya.org/main/img/events/shivir4.jpg",
+      title: "Narmada Jayanti Utsav",
+      category: "events",
+      description: "Lepa Punarvas"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Classroom Learning",
-      category: "education",
-      description: "Interactive learning session in our primary education program."
+      image: "https://www.narmadalaya.org/main/img/events/narmada_jayanti5.jpg",
+      title: "Narmada Jayanti Utsav",
+      category: "events",
+      description: "Lepa Punarvas"
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Annual Sports Day",
+      image: "https://www.narmadalaya.org/main/img/events/shivir6.jpg",
+      title: "Nimar Abhyudaya - Goshala",
       category: "events",
-      description: "Students showcasing their athletic talents during sports competition."
+      description: "Lepa Punarvas"
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Women Empowerment Workshop",
+      image: "https://www.narmadalaya.org/main/img/events/shivir7.jpg",
+      title: "Nimar Abhyudaya - Goshala",
       category: "community",
-      description: "Skill development workshop for women in rural areas."
+      description: "Lepa Punarvas"
     },
     {
       id: 7,
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Healthcare Training",
+      image: "https://www.narmadalaya.org/main/img/events/shivir8.jpg",
+      title: "Adhyatmik Shivir",
       category: "healthcare",
-      description: "Training session for community health workers."
+      description: "Lepa Punarvas"
     },
     {
       id: 8,
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Sports Training Program",
+      image: "https://www.narmadalaya.org/main/img/sports/marathon10.jpg",
+      title: "11km IIM Indore Marathon",
       category: "events",
-      description: "Professional coaching session for young athletes."
+      description: "2020"
     },
     {
       id: 9,
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Computer Literacy Class",
+      image: "https://www.narmadalaya.org/main/img/sports/marathon14.jpg",
+      title: "10km Shivpur Marathon",
       category: "education",
-      description: "Digital literacy program for students and adults."
+      description: "2018"
     },
     {
       id: 10,
-      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Clean Water Initiative",
+      image: "https://www.narmadalaya.org/main/img/award/Jalgaon_Award.jpg",
+      title: "2020",
       category: "environment",
-      description: "Installation of water purification systems in villages."
+      description: "Avinashi Award in Memory of Dr. Avinash Acharya by Keshav smrati Pratishthaan, Jalgaon"
     },
     {
       id: 11,
-      image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Volunteer Training",
+      image: "https://www.narmadalaya.org/main/img/award/Vasantrao_Pawar_Award.jpg",
+      title: "2019",
       category: "community",
-      description: "Orientation program for new volunteers joining our mission."
+      description: "Dr. Vasantrao Pawar Award in memory of Dr. Vasantrav Pawar by Nilvasant Foundation, Nasik"
     },
     {
       id: 12,
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      title: "Cultural Festival",
+      image: "https://www.narmadalaya.org/main/img/award/award.jpg",
+      title: "2016",
       category: "events",
-      description: "Celebrating local culture and traditions with the community."
+      description: "Vishista Seva Samman by Santeshwar Foundation, New Delhi"
     }
   ];
 
@@ -205,7 +205,7 @@ const Gallery = () => {
                 <p className="text-gray-600">Events Documented</p>
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-orange-600 mb-2">25+</h3>
+                <h3 className="text-3xl font-bold text-orange-600 mb-2">15+</h3>
                 <p className="text-gray-600">Years of Memories</p>
               </div>
               <div>
@@ -217,19 +217,18 @@ const Gallery = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h3 className="text-3xl font-bold mb-4">Be Part of Our Story</h3>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Every photo tells a story of hope, transformation, and impact. 
-              Join us in creating more moments worth capturing.
+        <section className="py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white  text-center">
+           <div className="p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Join Our Journey</h3>
+            <p className="text-orange-100 mb-6 text-lg">
+             Every contribution—whether a donation, a volunteer hour, or a small act of kindness—fuels these numbers and the meaningful change behind them. Be a catalyst for growth and empowerment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Volunteer With Us
+                Donate Now
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all">
-                Share Your Photos
+                Become a Volunteer
               </button>
             </div>
           </div>

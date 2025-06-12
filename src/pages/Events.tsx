@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Users, ExternalLink } from 'lucide-react';
+import pastEvents1 from "../assets/images/events/narmada-jayanti-2024.jpg";
+import pastEvents2 from "../assets/images/events/narmada-jayanti-2024.jpg";
+import pastEvents3 from "../assets/images/events/bhav-prachar-2024.jpg";
 
 const Events = () => {
   const upcomingEvents = [
@@ -41,34 +44,31 @@ const Events = () => {
 
   const pastEvents = [
     {
-      title: "Educational Workshop Series",
-      date: "December 10, 2024",
-      time: "10:00 AM - 4:00 PM",
-      location: "RKSN School Campus",
-      description: "Teacher training workshop on modern educational techniques and digital learning methods.",
+      title: "Narmada jayanti 2025",
+      date: "Feb 10, 2025",
+      location: "Narmadalaya, Lepa Punarwas",
+      description: "Like every year, we celebrated Narmada Jayanti with great enthusiasm this year as well. It was a three-day festival, held from 2nd to 4th February 2025, featuring performances by various artists and speakers. On the first day, we also organized special programs at our center in Bhattiyan",
       attendees: "75",
-      image: "/placeholder.svg",
-      category: "Education"
+      image: pastEvents1,
+      category: "Regional"
     },
     {
-      title: "Women Empowerment Seminar",
+      title: "Guru purnima 2024",
       date: "November 15, 2024",
-      time: "2:00 PM - 6:00 PM",
-      location: "Community Hall, Aurangabad",
+      location: "Narmadalaya, Lepa Punarwas",
       description: "Skill development and entrepreneurship workshop for women in rural areas.",
       attendees: "120",
-      image: "/placeholder.svg",
-      category: "Community"
+      image: pastEvents2,
+      category: "Regional"
     },
     {
-      title: "Blood Donation Camp",
+      title: "Narmada jayanti 2024",
       date: "October 20, 2024",
-      time: "9:00 AM - 3:00 PM",
-      location: "City Hospital, Nagpur",
-      description: "Annual blood donation drive in partnership with local hospitals and blood banks.",
+      location: "Narmadalaya, Lepa Punarwas",
+      description: "Like every year, the Narmada Jayanti festival was celebrated by Nimar Abhyudaya from 16th to 18th Feb 2024. Shree Milind Mahajan ji, eminent social worker from Indore, was present as the chief guest. Shri Bharat Bairagi Ji from Bhopal was felicitated by Nimar Abhyudaya Narmada Sanman 2024 for exemplary work and propagating importance of Sanskrit language and literature and Shri Bharat Amalkar Ji from Jalgaon was felicitated by special honour for his exemplary work in the field banking and other social activities. On this occasion, the Hindi edition of Goshta Narmadalayachi was published with the title “Kahani Narmadalya Ki” which was translated by our beloved Shrimati Shubhada Marathe. The website of Vivekananda Institute of Rural Technology and Narmadalya Fablab (LINK - https://www.virt-narmada.com/) was also launched. Almost three hundred plus well-wishers of Narmadalaya participated in this three day program from various parts of Maharashtra and Madhya Pradesh .",
       attendees: "200",
-      image: "/placeholder.svg",
-      category: "Healthcare"
+      image: pastEvents3,
+      category: "Regional"
     }
   ];
 
@@ -118,7 +118,7 @@ const Events = () => {
                     <img 
                       src={event.image} 
                       alt={event.title}
-                      className="w-full h-48 object-cover rounded-t-lg"
+                      className="w-full h-60 object-cover rounded-t-lg"
                     />
                     {event.featured && (
                       <div className="absolute top-4 left-4">
@@ -164,9 +164,6 @@ const Events = () => {
                       <Button className="flex-1 bg-orange-500 hover:bg-orange-600">
                         Register Now
                       </Button>
-                      <Button variant="outline" size="icon">
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -192,7 +189,7 @@ const Events = () => {
                     <img 
                       src={event.image} 
                       alt={event.title}
-                      className="w-full h-48 object-cover rounded-t-lg"
+                      className="w-full h-60 object-cover rounded-t-lg"
                     />
                     <div className="absolute top-4 right-4">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(event.category)}`}>
@@ -237,9 +234,6 @@ const Events = () => {
               Join our events and help us create lasting positive change in communities across Maharashtra
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3">
-                Volunteer with Us
-              </Button>
               <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3">
                 Contact for Partnership
               </Button>

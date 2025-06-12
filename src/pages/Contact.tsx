@@ -11,7 +11,7 @@ const Contact = () => {
         <title>Contact Us - Narmadalaya Charitable Trust</title>
         <meta name="description" content="Get in touch with Narmadalaya Charitable Trust. Find our contact information and reach out to learn more about our programs." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white">
@@ -34,7 +34,7 @@ const Contact = () => {
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                   <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                    Have questions about our programs? Want to volunteer or donate? 
+                    Have questions about our programs? Want to volunteer or donate?
                     We're here to help and would love to connect with you.
                   </p>
                 </div>
@@ -50,10 +50,8 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-2">Our Address</h3>
                           <p className="text-gray-600">
-                            Narmadalaya Charitable Trust<br />
-                            123 Gandhi Nagar, Main Road<br />
-                            Ahmedabad, Gujarat - 380001<br />
-                            India
+                            Narmadalaya, Lepa Punarwas (Bairagarh),
+                            Tehsil – Kasrawad, District – Khargone, Madhya Pradesh, India, Pin Code – 451228
                           </p>
                         </div>
                       </div>
@@ -69,9 +67,8 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-2">Phone Numbers</h3>
                           <p className="text-gray-600">
-                            Main Office: +91 79 2345 6789<br />
-                            Mobile: +91 98765 43210<br />
-                            Emergency: +91 99999 88888
+
+                            +91 9575756141, +91 8120202010
                           </p>
                         </div>
                       </div>
@@ -105,9 +102,7 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-gray-900 mb-2">Office Hours</h3>
                           <p className="text-gray-600">
-                            Monday - Friday: 9:00 AM - 6:00 PM<br />
-                            Saturday: 9:00 AM - 2:00 PM<br />
-                            Sunday: Closed
+                            All days - Friday: 9:00 AM - 6:00 PM
                           </p>
                         </div>
                       </div>
@@ -214,7 +209,7 @@ const Contact = () => {
                         ></textarea>
                       </div>
 
-                      <Button 
+                      <Button
                         type="submit"
                         className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 text-lg font-semibold"
                       >
@@ -230,24 +225,45 @@ const Contact = () => {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-white h-[400px] md:h-[600px]">
+          <div className="container mx-auto px-4 h-full">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
               <p className="text-lg text-gray-600">
                 Come and see our work firsthand. We welcome visitors and volunteers.
               </p>
             </div>
-            
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">Interactive map will be integrated here</p>
-                <p className="text-sm text-gray-500">123 Gandhi Nagar, Ahmedabad, Gujarat - 380001</p>
-              </div>
+
+            <div className="bg-gray-200 rounded-lg flex h-[400px] md:h-[380px] items-center justify-center">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.1566864615997!2d75.68538837528729!3d22.120000879816683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39627da18179c3bf%3A0x221e328cfe3a0837!2sNimar%20Abhyudaya%20Rural%20Management%20And%20Development%20Association!5e0!3m2!1sen!2sin!4v1749403617421!5m2!1sen!2sin"
+                loading="lazy"
+                allowFullScreen
+                className="w-full h-full"
+                ></iframe>
             </div>
           </div>
         </section>
+
+        {/* <section className="py-0 bg-white h-[600px] md:h-[700px]">
+  <div className="container mx-auto px-0 h-full">
+    <div className="text-center py-12 px-4">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
+      <p className="text-lg text-gray-600">
+        Come and see our work firsthand. We welcome visitors and volunteers.
+      </p>
+    </div>
+
+    <div className="w-full h-full">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.1566864615997!2d75.68538837528729!3d22.120000879816683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39627da18179c3bf%3A0x221e328cfe3a0837!2sNimar%20Abhyudaya%20Rural%20Management%20And%20Development%20Association!5e0!3m2!1sen!2sin!4v1749403617421!5m2!1sen!2sin"
+        loading="lazy"
+        allowFullScreen
+        className="w-full h-full border-0"
+      ></iframe>
+    </div>
+  </div>
+</section> */}
+
       </div>
     </>
   );

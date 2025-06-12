@@ -83,18 +83,6 @@ const School = () => {
               <p className="text-xl opacity-90 mb-8 animate-slide-up">
                 Empowering young minds through quality education and holistic development
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
-                <h3 className="text-2xl font-bold mb-4">Established 2018</h3>
-                <p className="text-lg opacity-90 mb-6">
-                  Providing free quality education to 350+ students from underprivileged backgrounds
-                </p>
-                <Link to="/school-details">
-                  <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 font-semibold">
-                    Explore School Details
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
             </div>
           </div>
         </section>
@@ -104,16 +92,16 @@ const School = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in-left">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">About RKSN School</h2>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Ramkrishna Sarda Niketan</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Raja Kiran Shikshan Niketan (RKSN) School was established with the mission to provide 
-                  quality education to children from economically disadvantaged families. Our school serves 
-                  as a beacon of hope, transforming lives through education.
+                 Ramkrishna Sarda Niketan, formal school started at Lepa Punarvas to impart quality specially for the education if the children of economically weaker section of the society in April 2015. Branches of Ramkrishna Sarda Niketan were opened at Bhattyan village in April 2016 and Chhoti Khargone village in June 2016.
+
+All the facility including Education, Vocational skills, Mid day meals, School uniform etc. are provided totally free of cost.
+
+
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
-                  We believe that every child deserves access to quality education regardless of their 
-                  economic background. Our dedicated faculty and modern infrastructure ensure that 
-                  students receive the best possible learning experience.
+Students are proving their talents in Music, Sports, Vocational skills and Academics as well.
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6">
@@ -138,7 +126,7 @@ const School = () => {
               
               <div className="animate-slide-in-right">
                 <img 
-                  src="/placeholder.svg" 
+                  src="https://www.narmadalaya.org/main/img/lic.jpg" 
                   alt="RKSN School Building"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />
@@ -243,13 +231,13 @@ const School = () => {
               <div className="text-center">
                 <MapPin className="h-12 w-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Address</h3>
-                <p className="opacity-90">Village Narmada, Tal. Sangamner, Dist. Ahmednagar, Maharashtra - 422605</p>
+                <p className="opacity-90">Narmadalaya, lepa Punarvas, Kasrawad, Madhya Pradesh 451228</p>
               </div>
               
               <div className="text-center">
                 <Phone className="h-12 w-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Phone</h3>
-                <p className="opacity-90">+91 9876543210</p>
+                <p className="opacity-90">+91 0000000000</p>
               </div>
               
               <div className="text-center">
@@ -265,7 +253,7 @@ const School = () => {
                   View Full Details
                 </Button>
               </Link>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3">
+              <Button variant="outline" className="border-white text-orange-600 hover:bg-white hover:text-orange-600 px-8 py-3">
                 Schedule a Visit
               </Button>
             </div>

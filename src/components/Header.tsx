@@ -13,6 +13,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "../assets/images/narmada_logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,11 +53,16 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" onClick={handleNavigation}>
-            <div className="h-10 w-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
-              <Heart className="h-6 w-6 text-white" />
+            <div className="h-10 w-10 text-white rounded-full flex items-center justify-center">
+              {/* <Heart className="h-6 w-6 text-white" /> */}
+              <img
+                src={logo}
+                alt={logo}
+                className="h-10 w-10"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-orange-600">Narmadalaya</span>
+              <span className="text-xl font-bold text-orange-600">NARMADALAYA</span>
               <span className="text-xs text-gray-600">Charitable Trust</span>
             </div>
           </Link>
@@ -216,7 +222,7 @@ const Header = () => {
                   >
                     Home
                   </Link>
-                  
+
                   <div className="space-y-2">
                     <div className="text-lg font-medium py-2 text-orange-600">Who We Are</div>
                     {whoWeAreItems.map((item) => (

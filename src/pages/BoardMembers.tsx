@@ -2,57 +2,82 @@
 import { Helmet } from 'react-helmet-async';
 import { Award, Users, Briefcase, GraduationCap } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
+import board1 from "../assets/images/board/Lalita_Deshpande.jpg";
+import board2 from "../assets/images/board/Kishore_Bhamre.jpg";
+import board3 from "../assets/images/board/Mahesh Dabak.jpg";
+import board4 from "../assets/images/board/Mangesh_Kekre.jpg";
+import board5 from "../assets/images/board/Bharati_Thakur.jpg";
+import board6 from "../assets/images/board/Sarvjeet_Paranjpe.jpg";
+import board7 from "../assets/images/board/ravindra_marathe.jpg";
+
+
 
 const BoardMembers = () => {
   const boardMembers = [
     {
-      name: "Dr. Ravi Krishnamurthy",
-      position: "Chairman",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Renowned social activist and former IAS officer with 35+ years of public service experience.",
+      name: "Dr. Nitin Karmalkar",
+      position: "President",
+      image: "/placeholder.svg",
+      bio: "Mathematician, Social Worker",
       qualifications: ["IAS (Retd.)", "PhD Public Administration", "Padma Shri Awardee"],
       expertise: "Public Policy & Governance"
     },
     {
-      name: "Mrs. Sunita Agarwal",
-      position: "Vice Chairperson",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Leading entrepreneur and philanthropist dedicated to women's empowerment and education.",
-      qualifications: ["MBA Harvard", "Women Entrepreneur Award", "Social Impact Leader"],
-      expertise: "Women Empowerment & Education"
-    },
-    {
-      name: "Dr. Manjeet Singh",
-      position: "Secretary",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Medical professional and researcher committed to healthcare accessibility in rural areas.",
+      name: "Mr. Mahesh Dabak",
+      position: "Vice President",
+      image: board3,
+      bio: "Educationalist",
       qualifications: ["MBBS, MD", "Public Health Specialist", "WHO Consultant"],
       expertise: "Healthcare & Rural Development"
     },
     {
-      name: "Mr. Arjun Mehta",
-      position: "Treasurer",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Chartered Accountant and financial expert ensuring transparency and accountability.",
-      qualifications: ["CA, CFA", "Financial Analyst", "Audit Expert"],
-      expertise: "Financial Management & Compliance"
-    },
-    {
-      name: "Prof. Deepika Sharma",
-      position: "Education Advisor",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Former university professor and education policy expert with focus on inclusive education.",
+      name: "Ms. Bharati Thakur",
+      position: "Secretary",
+      image: board5,
+      bio: "Social Worker, Educationalist & Writer",
       qualifications: ["PhD Education", "Former Vice Chancellor", "Education Policy Expert"],
       expertise: "Educational Strategy & Policy"
     },
     {
-      name: "Mr. Vikram Joshi",
-      position: "Legal Advisor",
-      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Senior advocate specializing in social justice and human rights law.",
+      name: "Mr. Ravindra Marathe",
+      position: "Treasurer",
+      image: board7,
+      bio: "Retired Accountant",
       qualifications: ["LLM Human Rights", "Senior Advocate", "Human Rights Activist"],
       expertise: "Legal Affairs & Human Rights"
-    }
+    },
+    {
+      name: "Mr. Chintamani Kelkar ",
+      position: "Member",
+      image:  "/placeholder.svg",
+      bio: "Retired Accountant",
+      qualifications: ["LLM Human Rights", "Senior Advocate", "Human Rights Activist"],
+      expertise: "Legal Affairs & Human Rights"
+    },
+    {
+      name: "Mr. Mangesh Kekre ",
+      position: "Member",
+      image:  "/placeholder.svg",
+      bio: "Environmentalist",
+      qualifications: ["LLM Human Rights", "Senior Advocate", "Human Rights Activist"],
+      expertise: "Legal Affairs & Human Rights"
+    },
+    {
+      name: "Mr. Sarvjit Paranjpe",
+      position: "Member",
+      image: board6,
+      bio: "Environmentalist",
+      qualifications: ["LLM Human Rights", "Senior Advocate", "Human Rights Activist"],
+      expertise: "Legal Affairs & Human Rights"
+    },
+    {
+      name: "Mr. Nachiket Thakur ",
+      position: "Member",
+      image:  "/placeholder.svg",
+      bio: "Environmentalist",
+      qualifications: ["LLM Human Rights", "Senior Advocate", "Human Rights Activist"],
+      expertise: "Legal Affairs & Human Rights"
+    },
   ];
 
   return (
@@ -153,7 +178,7 @@ const BoardMembers = () => {
             </div>
 
             {/* Governance Information */}
-            <div className="mt-20 bg-white rounded-lg shadow-lg p-8">
+            {/* <div className="mt-20 bg-white rounded-lg shadow-lg p-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">
                 Governance & <span className="text-orange-600">Transparency</span>
               </h3>
@@ -189,7 +214,7 @@ const BoardMembers = () => {
                   View Annual Reports
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

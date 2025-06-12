@@ -3,44 +3,54 @@ import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Trophy, Medal, Target, Users, Calendar, MapPin } from 'lucide-react';
+import sports1 from "../assets/images/sports/marathon1.jpg";
+import sports2 from "../assets/images/sports/marathon2.jpg";
+import sports3 from "../assets/images/sports/marathon4.jpg";
+import sports4 from "../assets/images/sports/marathon5.jpg";
+import sports5 from "../assets/images/sports/marathon7.jpg";
+import sports6 from "../assets/images/sports/marathon9.jpg";
+import sports7 from "../assets/images/sports/marathon3.jpg";
+import sports8 from "../assets/images/sports/marathon6.jpg";
+import sports9 from "../assets/images/sports/marathon14.jpg";
+
 
 const Sports = () => {
   const sportsPrograms = [
     {
       title: "Cricket Training",
-      description: "Professional cricket coaching for students aged 8-18 years",
-      participants: "45",
-      coach: "Mr. Rajesh Patil",
-      schedule: "Mon, Wed, Fri - 4:00 PM",
-      icon: Target,
-      image: "/placeholder.svg"
+      image: sports1
     },
     {
       title: "Football Academy",
-      description: "Building teamwork and fitness through football training",
-      participants: "35",
-      coach: "Mr. Suresh Kumar",
-      schedule: "Tue, Thu, Sat - 3:30 PM",
-      icon: Target,
-      image: "/placeholder.svg"
+      image: sports2
     },
     {
       title: "Athletics Program",
-      description: "Track and field training including running, jumping, and throwing events",
-      participants: "28",
-      coach: "Ms. Priya Sharma",
-      schedule: "Daily - 5:00 AM",
-      icon: Target,
-      image: "/placeholder.svg"
+      image: sports3
     },
     {
       title: "Kabaddi Training",
-      description: "Traditional Indian sport promoting strength and strategy",
-      participants: "22",
-      coach: "Mr. Ganesh Jadhav",
-      schedule: "Mon, Wed, Fri - 5:00 PM",
-      icon: Target,
-      image: "/placeholder.svg"
+      image: sports4
+    },
+    {
+      title: "Kabaddi Training",
+      image: sports5
+    },
+    {
+      title: "Kabaddi Training",
+      image: sports6
+    },
+    {
+      title: "Kabaddi Training",
+      image: sports7
+    },
+    {
+      title: "Kabaddi Training",
+      image: sports8
+    },
+    {
+      title: "Kabaddi Training",
+      image: sports9
     }
   ];
 
@@ -110,7 +120,7 @@ const Sports = () => {
         <title>Sports - Narmadalaya Charitable Trust</title>
         <meta name="description" content="Discover our sports programs and activities promoting physical fitness and sportsmanship in our community." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-orange-500 to-red-500 text-white">
@@ -132,46 +142,19 @@ const Sports = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {sportsPrograms.map((program, index) => (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 stagger-animation">
-                  <div className="flex">
-                    <div className="w-1/3">
-                      <img 
-                        src={program.image} 
-                        alt={program.title}
-                        className="w-full h-full object-cover rounded-l-lg"
-                      />
-                    </div>
-                    <div className="w-2/3 p-6">
-                      <div className="flex items-center mb-3">
-                        <div className="bg-orange-500 p-2 rounded-full mr-3">
-                          <program.icon className="h-5 w-5 text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900">{program.title}</h3>
-                      </div>
-                      
-                      <p className="text-gray-600 mb-4">{program.description}</p>
-                      
-                      <div className="space-y-2 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-500">Participants:</span>
-                          <span className="font-medium">{program.participants} students</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-500">Coach:</span>
-                          <span className="font-medium">{program.coach}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-500">Schedule:</span>
-                          <span className="font-medium">{program.schedule}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
+<div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+  {sportsPrograms.map((program, index) => (
+    <div key={index} className="break-inside-avoid overflow-hidden rounded-lg shadow-lg">
+      <img 
+        src={program.image} 
+        alt={program.title}
+        className="w-full h-auto object-cover rounded"
+      />
+    </div>
+  ))}
+</div>
+
+
           </div>
         </section>
 
@@ -201,7 +184,7 @@ const Sports = () => {
                       </div>
                       <span className="text-2xl font-bold text-orange-600">{achievement.year}</span>
                     </div>
-                    
+
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center text-gray-600">
                         <MapPin className="h-4 w-4 mr-2" />
@@ -219,68 +202,30 @@ const Sports = () => {
           </div>
         </section>
 
-        {/* Upcoming Events */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Upcoming Sports Events</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Join us for exciting sports events and competitions
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {upcomingEvents.map((event, index) => (
-                <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 stagger-animation">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{event.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3 mb-4">
-                      <div className="flex items-center text-gray-600">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        <span>{event.date}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        <span>{event.venue}</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-6">{event.description}</p>
-                    <Button className="w-full bg-orange-500 hover:bg-orange-600">
-                      Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Sports Statistics */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-16">Sports Impact</h2>
-            
+
             <div className="grid md:grid-cols-4 gap-8">
               <div className="bg-orange-50 p-8 rounded-lg">
                 <Users className="h-12 w-12 text-orange-600 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-orange-600 mb-2">130</div>
                 <div className="text-gray-700">Active Athletes</div>
               </div>
-              
+
               <div className="bg-orange-50 p-8 rounded-lg">
                 <Trophy className="h-12 w-12 text-orange-600 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-orange-600 mb-2">15</div>
                 <div className="text-gray-700">Tournaments Won</div>
               </div>
-              
+
               <div className="bg-orange-50 p-8 rounded-lg">
                 <Medal className="h-12 w-12 text-orange-600 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-orange-600 mb-2">4</div>
                 <div className="text-gray-700">Sports Programs</div>
               </div>
-              
+
               <div className="bg-orange-50 p-8 rounded-lg">
                 <Target className="h-12 w-12 text-orange-600 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-orange-600 mb-2">6</div>
@@ -298,7 +243,7 @@ const Sports = () => {
               Help us provide better sports facilities and training opportunities for our students
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3">
+              <Button variant="outline" className="border-white text-orange-600 hover:bg-white hover:text-orange-600 px-8 py-3">
                 Sponsor Equipment
               </Button>
               <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3">

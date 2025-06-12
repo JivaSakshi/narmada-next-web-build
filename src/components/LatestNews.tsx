@@ -3,6 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import news2 from "../assets/images/news/2.png";
+import news3 from "../assets/images/news/3.jpeg";
+import news4 from "../assets/images/news/6.jpeg";
+import news5 from "../assets/images/news/7.jpeg";
+import news6 from "../assets/images/news/8.png";
+import news7 from "../assets/images/news/7.jpeg";
 
 const LatestNews = () => {
   const news = [
@@ -11,7 +17,7 @@ const LatestNews = () => {
       excerpt: "Our students showcased their talents in various sports events, promoting fitness and teamwork across all age groups.",
       date: "March 15, 2024",
       author: "Narmadalaya Team",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      image: news2,
       category: "Sports"
     },
     {
@@ -19,7 +25,7 @@ const LatestNews = () => {
       excerpt: "We've initiated a comprehensive tree plantation drive aimed at planting 10,000 trees across rural communities.",
       date: "March 10, 2024",
       author: "Environmental Team",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      image: news3,
       category: "Environment"
     },
     {
@@ -27,7 +33,7 @@ const LatestNews = () => {
       excerpt: "Recognizing outstanding students and teachers who have shown exceptional dedication to learning and education.",
       date: "March 5, 2024",
       author: "Education Department",
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+      image: news5,
       category: "Education"
     }
   ];

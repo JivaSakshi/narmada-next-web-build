@@ -19,8 +19,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Dedicated to serving humanity through education, healthcare, and community development. 
-              Join us in making a difference in the lives of those who need it most.
+              Nimar Abhyudaya Rural Management And Development Association (N.A.R.M.A.D.A.) is a spiritually oriented service mission.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
@@ -70,9 +69,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-orange-400 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  Narmadalaya Charitable Trust<br />
-                  Address Line 1<br />
-                  City, State - Pincode
+                  Narmadalaya, lepa Punarvas, Kasrawad, Madhya Pradesh 451228
                 </p>
               </div>
               <div className="flex items-center space-x-3">
@@ -89,7 +86,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Narmadalaya Charitable Trust. All rights reserved. | 
+            © 2025 Narmadalaya Charitable Trust. All rights reserved. | 
             <Link to="/certificates" className="hover:text-orange-400 transition-colors ml-1">Certificates</Link> |
             <Link to="/contact" className="hover:text-orange-400 transition-colors ml-1">Privacy Policy</Link>
           </p>

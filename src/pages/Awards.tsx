@@ -3,76 +3,86 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Award, Trophy, Medal, Star, Calendar, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import award1 from "../assets/images/award/Guru_Gourav_Puraskar.jpg";
+import award2 from "../assets/images/award/Jalgaon_Award.jpg";
+import award3 from "../assets/images/award/nanded_award.jpg";
+import award4 from "../assets/images/award/Vasantrao_Pawar_Award.jpg";
+import award5 from "../assets/images/award/keshav_smrati_award.jpg";
+import award6 from "../assets/images/award/Award_Natu_Foundation.jpg";
+
 
 const Awards = () => {
   const awards = [
     {
       id: "ngo-excellence-2024",
-      title: "NGO Excellence Award 2024",
-      organization: "Maharashtra NGO Federation",
-      year: "2024",
-      location: "Mumbai, Maharashtra",
-      description: "Recognized for outstanding contribution to education and community development in rural areas",
+      title: "Guru Gourav Puraskar",
+      organization: "by Maatru Mandir Vishwast Sanstha",
+      year: "2021",
+      location: "Pune, Maharashtra",
+      description: "Awarded for innovative educational programs and digital literacy initiatives at RKSN School",
       category: "Excellence",
       icon: Trophy,
-      image: "/placeholder.svg",
+      image: award1,
       featured: true
     },
     {
       id: "educational-initiative-2023",
-      title: "Best Educational Initiative Award",
-      organization: "Education Ministry, Government of Maharashtra",
-      year: "2023",
-      location: "Pune, Maharashtra",
+      title: "Avinashi Award in Memory of Dr. Avinash Acharya",
+      organization: "by Keshav smrati Pratishthaan",
+      year: "2020",
+      location: "Jalgaon, Maharashtra",
       description: "Awarded for innovative educational programs and digital literacy initiatives at RKSN School",
       category: "Education",
       icon: Award,
-      image: "/placeholder.svg",
+      image: award2,
       featured: false
     },
     {
       id: "social-impact-2023",
-      title: "Social Impact Recognition",
+      title: "Jankalyan Samiti Maharashtra - Shri Guruji Rashtriya Puraskar",
       organization: "Rotary Club International",
       year: "2023",
       location: "Nashik, Maharashtra",
       description: "Honored for significant social impact in healthcare and community welfare programs",
       category: "Social Impact",
       icon: Medal,
-      image: "/placeholder.svg",
+      image: award3,
       featured: false
     },
     {
-      title: "Environmental Conservation Award",
-      organization: "Green India Foundation",
-      year: "2022",
-      location: "Aurangabad, Maharashtra",
+      id: "social-impact-2024",
+      title: "Dr. Vasantrao Pawar Award in memory of Dr. Vasantrav Pawar",
+      organization: "by Nilvasant Foundation",
+      year: "2019",
+      location: "Nasik, Maharashtra",
       description: "Recognized for tree plantation drives and environmental conservation efforts",
       category: "Environment",
       icon: Star,
-      image: "/placeholder.svg",
+      image: award4,
       featured: false
     },
     {
-      title: "Rural Development Excellence",
-      organization: "District Collector's Office",
-      year: "2022",
-      location: "Ahmednagar, Maharashtra",
+      id: "social-impact-2026",
+      title: "Vasundhara Krutagyata Award",
+      organization: "by Omkar Trust",
+      year: "2019",
+      location: "Pune, Maharashtra",
       description: "Awarded for exceptional work in rural development and women empowerment programs",
       category: "Development",
       icon: Award,
-      image: "/placeholder.svg",
+      image: award5,
       featured: false
     },
     {
-      title: "Healthcare Service Award",
-      organization: "Medical Association of Maharashtra",
-      year: "2021",
-      location: "Nagpur, Maharashtra",
+      id: "social-impact-2028",
+      title: "Mahadev Balwant Natu Award",
+      organization: "Natu Foundation",
+      year: "2019",
+      location: "Pune, Maharashtra",
       description: "Honored for providing free healthcare services and conducting medical camps in remote areas",
       category: "Healthcare",
       icon: Medal,
-      image: "/placeholder.svg",
+      image: award6,
       featured: false
     }
   ];
@@ -118,63 +128,65 @@ const Awards = () => {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8">
-              {awards.map((award, index) => (
-                <Card key={index} className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 stagger-animation ${award.featured ? 'ring-2 ring-orange-500' : ''}`}>
-                  <CardContent className="p-0">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="md:w-1/3">
-                        <div className="relative">
-                          <img 
-                            src={award.image} 
-                            alt={award.title}
-                            className="w-full h-64 md:h-full object-cover"
-                          />
-                          {award.featured && (
-                            <div className="absolute top-4 left-4">
-                              <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                Latest
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div className="md:w-2/3 p-8">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center space-x-3">
-                            <div className="bg-orange-500 p-2 rounded-full">
-                              <award.icon className="h-5 w-5 text-white" />
-                            </div>
-                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(award.category)}`}>
-                              {award.category}
-                            </span>
-                          </div>
-                          <div className="text-2xl font-bold text-orange-600">{award.year}</div>
-                        </div>
-                        
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{award.title}</h3>
-                        <p className="text-lg text-orange-600 font-medium mb-4">{award.organization}</p>
-                        <p className="text-gray-600 mb-4">{award.description}</p>
-                        
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center text-gray-500 text-sm">
-                            <MapPin className="h-4 w-4 mr-1" />
-                            <span>{award.location}</span>
-                          </div>
-                          
-                          {award.id && (
-                            <Link to={`/awards/${award.id}`}>
-                              <Button variant="outline" size="sm" className="text-orange-600 border-orange-600 hover:bg-orange-50">
-                                View Details
-                                <ArrowRight className="h-4 w-4 ml-2" />
-                              </Button>
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+     {awards.map((award, index) => (
+  <Card
+    key={index}
+    className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 stagger-animation ${award.featured ? 'ring-2 ring-orange-500' : ''}`}
+  >
+    <CardContent className="p-0">
+      <div className="flex flex-col">
+        <div className="relative">
+          <img
+            src={award.image}
+            alt={award.title}
+            className="w-full h-80 object-cover rounded-t-lg"
+          />
+          {award.featured && (
+            <div className="absolute top-4 left-4">
+              <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                Latest
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="p-8">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="bg-orange-500 p-2 rounded-full">
+                <award.icon className="h-5 w-5 text-white" />
+              </div>
+              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(award.category)}`}>
+                {award.category}
+              </span>
+            </div>
+            <div className="text-2xl font-bold text-orange-600">{award.year}</div>
+          </div>
+
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">{award.title}</h3>
+          <p className="text-lg text-orange-600 font-medium mb-4">{award.organization}</p>
+          <p className="text-gray-600 mb-4">{award.description}</p>
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center text-gray-500 text-sm">
+              <MapPin className="h-4 w-4 mr-1" />
+              <span>{award.location}</span>
+            </div>
+
+            {award.id && (
+              <Link to={`/awards/${award.id}`}>
+                <Button variant="outline" size="sm" className="text-orange-600 border-orange-600 hover:bg-orange-50">
+                  View Details
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+))}
+
             </div>
           </div>
         </section>
@@ -224,11 +236,6 @@ const Awards = () => {
               <Link to="/donation">
                 <Button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 font-semibold">
                   Support Our Mission
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 font-semibold">
-                  Become a Volunteer
                 </Button>
               </Link>
             </div>

@@ -134,10 +134,9 @@ const ImpactStats = () => {
 
         <div className="mt-16 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Be Part of Our Success Story</h3>
+            <h3 className="text-2xl font-bold mb-4">Join Our Journey</h3>
             <p className="text-orange-100 mb-6 text-lg">
-              Every donation, every volunteer hour, and every act of kindness contributes to these numbers. 
-              Join us in creating an even bigger impact for future generations.
+             Every contribution—whether a donation, a volunteer hour, or a small act of kindness—fuels these numbers and the meaningful change behind them. Be a catalyst for growth and empowerment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-lg font-semibold transition-colors">

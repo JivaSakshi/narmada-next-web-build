@@ -3,18 +3,26 @@ import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Eye, ArrowRight, Tag } from 'lucide-react';
+import news1 from "../assets/images/news/hindustan_samachar_news.jpg";
+import news2 from "../assets/images/news/2.png";
+import news3 from "../assets/images/news/3.jpeg";
+import news4 from "../assets/images/news/6.jpeg";
+import news5 from "../assets/images/news/7.jpeg";
+import news6 from "../assets/images/news/8.png";
+import news7 from "../assets/images/news/7.jpeg";
+
 
 const News = () => {
   const featuredNews = {
-    title: "RKSN School Receives State Recognition for Digital Education Excellence",
-    excerpt: "Our school has been recognized by the Maharashtra Education Department for outstanding implementation of digital learning programs...",
-    content: "The Maharashtra Education Department has honored RKSN School with the Digital Education Excellence Award for 2024. This recognition comes after our successful implementation of comprehensive digital learning programs that have transformed the educational experience for over 350 students from rural backgrounds.",
-    date: "December 20, 2024",
-    author: "Dr. Priya Sharma",
+    title: "आदिवासी विद्यार्थ्यांसाठी नर्मदालयने शोधली संकटातून संधी",
+    excerpt: "- कोरोना संकट काळात दिले कौशल्य विकासाचे प्रशिक्षण",
+    content: "पुणे,07 नोव्हेबर (हिन्दुस्तान समाचार ) : कोरोना साथरोगामुळे देशात संकटांची मालिका उभी केली. व्यवसाय, उद्योग, शिक्षण आणि नोक-या सर्वच क्षेत्र या साथरोगामुळे प्रभावित झालेत. पण, मध्यप्रदेशातील निमाड भागातील काही आदिवासी मुला-मुलींना कोरोना साथरोगाचा अनपेक्षित लाभ झालाय. या शालेय विद्यार्थ्यांना लॉकडाऊनच्या काळात कौशल्य विकसित करण्याची संधी मिळाली. त्याबळावर आता त्यांना रोजगाराची संधी उपलब्ध होऊ शकते. ‘नर्मदालय’ संस्थेच्या संस्थापिका व विश्वस्त भारती ठाकूर यांनी ही माहिती दिली. यासंदर्भात माहिती देताना भारती ठाकूर म्हणाल्या की, “कधी-कधी वाईटातून चांगले घडते” या उक्तीचा प्रत्यय कोरोना काळात आला. कोरोना साथरोगाला प्रतिबंध लावण्यासाठी देशात लॉकडाऊन जाहीर करण्यात आले होते. याकाळात लोकांचा एकमेकांशी संपर्क केवळ मोबाईलवरून होत होता. परंतु, या संकटाच्या काळातही नर्मदालयने संधी शोधली. बाहेरच्या जगाला माहिती नसलेले मध्यप्रदेशातील खरगोना जिल्ह्यात नर्मदेच्या काठी असलेल्या लेपा खेड्यातील आदिवासी मुलांना नर्मदालय संस्थेमार्फत स्कील डेव्हलपमेंटचे प्रशिक्षण देण्यात आले...",
+    date: "Nov 07, 2021",
+    author: "हिन्दुस्तान समाचार",
     category: "Education",
     readTime: "5 min read",
-    views: "1,245",
-    image: "/placeholder.svg"
+    image: news1,
+    link: "https://marathi.hindusthansamachar.in/NewsDetail?q=D105EC4017C2581B1E912BB856C2DCC8&fbclid=IwAR1yFeMAB2Ktnl9DeHkZPDFHp0qPveyI6Pv7UlhCcZh62kAfo4zIbrHzWYo"
   };
 
   const newsArticles = [
@@ -25,8 +33,7 @@ const News = () => {
       author: "Dr. Rajesh Patil",
       category: "Healthcare",
       readTime: "3 min read",
-      views: "892",
-      image: "/placeholder.svg"
+      image: news2
     },
     {
       title: "Environmental Conservation: 1000 Trees Planted This Month",
@@ -35,8 +42,7 @@ const News = () => {
       author: "Mr. Suresh Kumar",
       category: "Environment",
       readTime: "4 min read",
-      views: "756",
-      image: "/placeholder.svg"
+      image: news3
     },
     {
       title: "Women Empowerment Workshop Graduates 50 Participants",
@@ -45,8 +51,7 @@ const News = () => {
       author: "Ms. Sunita Jadhav",
       category: "Community",
       readTime: "3 min read",
-      views: "634",
-      image: "/placeholder.svg"
+      image: news4
     },
     {
       title: "Cricket Team Wins District Championship",
@@ -55,8 +60,7 @@ const News = () => {
       author: "Mr. Ganesh Patil",
       category: "Sports",
       readTime: "2 min read",
-      views: "1,123",
-      image: "/placeholder.svg"
+      image: news5
     },
     {
       title: "New Computer Lab Inaugurated with 25 Latest Systems",
@@ -65,8 +69,7 @@ const News = () => {
       author: "Mr. Anil Sharma",
       category: "Education",
       readTime: "4 min read",
-      views: "987",
-      image: "/placeholder.svg"
+      image: news6
     },
     {
       title: "Annual Scholarship Program Awards 50 Students",
@@ -75,8 +78,7 @@ const News = () => {
       author: "Dr. Meera Kulkarni",
       category: "Education",
       readTime: "3 min read",
-      views: "845",
-      image: "/placeholder.svg"
+      image: news7
     }
   ];
 
@@ -151,8 +153,6 @@ const News = () => {
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Eye className="h-4 w-4" />
-                        <span>{featuredNews.views}</span>
                       </div>
                     </div>
                     
@@ -205,17 +205,12 @@ const News = () => {
                         <span>{article.date}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Eye className="h-3 w-3" />
-                        <span>{article.views}</span>
                       </div>
                     </div>
                     
                     <div className="flex items-center justify-between">
                       <div className="text-sm text-gray-600">
                         By {article.author}
-                      </div>
-                      <div className="text-sm text-gray-500">
-                        {article.readTime}
                       </div>
                     </div>
                     

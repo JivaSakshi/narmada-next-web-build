@@ -2,6 +2,13 @@
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
 import { CalendarCheck, Bell, Heart, Users, GraduationCap, TreePine } from 'lucide-react';
+import whatsNew1 from "../assets/images/board/jitendra.png";
+import whatsNew2 from "../assets/images/board/jitendra.png";
+import whatsNew3 from "../assets/images/board/jitendra.png";
+import whatsNew4 from "../assets/images/board/jitendra.png";
+import whatsNew5 from "../assets/images/board/jitendra.png";
+import whatsNew6 from "../assets/images/board/jitendra.png";
+
 
 const WhatsNew = () => {
   const updates = [
@@ -9,7 +16,7 @@ const WhatsNew = () => {
       date: "December 15, 2024",
       category: "Education",
       icon: GraduationCap,
-      title: "New Computer Lab Inaugurated at RKSN School",
+      title: "Three schools at lepa punarwas, bhattiyan and chhoti khargone",
       description: "We are excited to announce the opening of a state-of-the-art computer lab with 25 new computers, providing digital literacy education to over 300 students.",
       image: "/placeholder.svg",
       important: true
@@ -18,7 +25,7 @@ const WhatsNew = () => {
       date: "November 28, 2024",
       category: "Healthcare",
       icon: Heart,
-      title: "Free Health Camp Conducted in Rural Areas",
+      title: "Vivekananda institute of rural technology - vocational training centre",
       description: "Our medical team conducted a comprehensive health camp in 5 villages, providing free medical checkups and medicines to over 500 families.",
       image: "/placeholder.svg",
       important: false
@@ -27,7 +34,7 @@ const WhatsNew = () => {
       date: "November 10, 2024",
       category: "Environment",
       icon: TreePine,
-      title: "Tree Plantation Drive - 1000 Trees Planted",
+      title: "Narmadalaya fablab - digital fabrication lab",
       description: "In collaboration with local communities, we successfully planted 1000 trees across different locations, contributing to environmental conservation.",
       image: "/placeholder.svg",
       important: false
@@ -36,7 +43,7 @@ const WhatsNew = () => {
       date: "October 25, 2024",
       category: "Community",
       icon: Users,
-      title: "Women Empowerment Workshop Series Launched",
+      title: "Skills on wheels - mobile vocation training van ",
       description: "Started a series of skill development workshops for women, focusing on tailoring, handicrafts, and entrepreneurship development.",
       image: "/placeholder.svg",
       important: true
@@ -45,7 +52,7 @@ const WhatsNew = () => {
       date: "October 12, 2024",
       category: "Education",
       icon: GraduationCap,
-      title: "Scholarship Program for Meritorious Students",
+      title: "Goushala ",
       description: "Launched a scholarship program providing financial assistance to 50 deserving students from economically weaker sections.",
       image: "/placeholder.svg",
       important: false
@@ -54,7 +61,7 @@ const WhatsNew = () => {
       date: "September 30, 2024",
       category: "Achievement",
       icon: Bell,
-      title: "NGO Excellence Award Received",
+      title: "Narmada swar lahari",
       description: "Narmadalaya Charitable Trust was honored with the NGO Excellence Award for outstanding contribution to education and community development.",
       image: "/placeholder.svg",
       important: true

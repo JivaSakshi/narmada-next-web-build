@@ -8,45 +8,45 @@ const ProgramsSection = () => {
   const programs = [
     {
       icon: GraduationCap,
-      title: "Education & Schools",
-      description: "Quality education for underprivileged children through our dedicated school programs and educational initiatives.",
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/school"
+      title: "Narmadalaya",
+      description: "“Informal educational centres started in 2010 with only 14 students in Lepa village. This activity is meant...",
+      image: "https://www.narmadalaya.org/main/img/narmadalaya_home.jpg",
+      link: "#"
     },
     {
       icon: Heart,
-      title: "Community Healthcare",
-      description: "Comprehensive healthcare services and health awareness programs for rural and urban communities.",
-      image: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/whats-new"
+      title: "Ramkrishna Sarda Niketan",
+      description: "First School with vocational training in Nimar Region in Madhya Pradesh...",
+      image: "https://www.narmadalaya.org/main/img/rksn/rksn.jpg",
+      link: "#"
     },
     {
       icon: TreePine,
-      title: "Environmental Conservation",
-      description: "Protecting our environment through tree plantation drives, clean water initiatives, and sustainability programs.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/events"
+      title: "Ramkrishna Technical Institute",
+      description: "A rural technology Centre has been set up in 2016. Training in Plumbing, Carpentering, Welding..",
+      image: "https://www.narmadalaya.org/main/img/rit/rit.jpg",
+      link: "#"
     },
     {
       icon: Users,
-      title: "Skill Development",
-      description: "Empowering youth and adults with vocational training and skill development programs for better livelihoods.",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/awards"
+      title: "Narmada Nirmiti",
+      description: "An initiative to empower village womenfolk",
+      image: "https://www.narmadalaya.org/main/img/nirmiti/3.png",
+      link: "#"
     },
     {
       icon: Award,
-      title: "Sports & Recreation",
-      description: "Promoting physical fitness and sportsmanship through various sports activities and competitions.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/sports"
+      title: "Goshala",
+      description: "he Goshala was donated by Sant Rajgiri baba to us in 2014 with 6 cows. Presently 21 Nimari breed cows..",
+      image: "https://www.narmadalaya.org/main/img/goshala/goshala.jpg",
+      link: "#"
     },
     {
       icon: Camera,
-      title: "Cultural Programs",
-      description: "Preserving and promoting local culture through festivals, art exhibitions, and cultural events.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      link: "/gallery"
+      title: "Narmada Swar Lahri",
+      description: "Narmada Swar Lahari is a musical orchestra of students of Ramkrishna Sarda Niketan. They are...",
+      image: "https://www.narmadalaya.org/main/img/lahari/lahri.jpg",
+      link: "#"
     }
   ];
 
@@ -56,15 +56,14 @@ const ProgramsSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Users className="h-4 w-4" />
-            <span>Our Programs</span>
+            <span>Our Activities</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Making a Difference Through 
-            <span className="text-orange-600"> Diverse Programs</span>
+            <span className="text-orange-600"> NARMADALAYA</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive approach to community development encompasses education, healthcare, 
-            environmental conservation, and cultural preservation.
+           Nimar Abhyudaya began it’s work in the rural area of Nimar Region of Madhya Pradesh specially in the Narmada basin in 2010. Since then, it’s activities have expanded many folds.
           </p>
         </div>
 

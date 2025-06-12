@@ -6,6 +6,7 @@ import ProgramsSection from "@/components/ProgramsSection";
 import ImpactStats from "@/components/ImpactStats";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LatestNews from "@/components/LatestNews";
+import Honour from '@/components/Honour';
 
 const Home = () => {
   return (
@@ -25,7 +26,8 @@ const Home = () => {
         <AboutSection />
         <ProgramsSection />
         <ImpactStats />
-        <TestimonialsSection />
+        <Honour />
+        {/* <TestimonialsSection /> */}
         <LatestNews />
       </div>
     </>

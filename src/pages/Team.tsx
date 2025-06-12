@@ -2,62 +2,62 @@
 import { Helmet } from 'react-helmet-async';
 import { Mail, Linkedin, Phone, Award, Users, Heart } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
+import team1 from "../assets/images/board/digvijay_singh_chouhan.png";
+import team2 from "../assets/images/board/nilesh.png";
+import team3 from "../assets/images/board/golu.png";
+import team4 from "../assets/images/board/hemandra.png";
+import team5 from "../assets/images/board/shankar.png";
+import team6 from "../assets/images/board/jitendra.png";
+
 
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Rajesh Sharma",
-      position: "Executive Director",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Leading Narmadalaya with 20+ years of experience in social development and education.",
-      email: "rajesh@narmadalaya.org",
-      phone: "+91 98765 43210",
-      achievements: ["PhD in Social Work", "25 Years NGO Experience", "Published Author"]
+      name: "Mr. Digvijay Singh Chouhan",
+      position: "Chief Project Coordinator",
+      image: team1,
+      bio: "Looks after Construction and Administration",
+      email: "digvijay@narmadalaya.org",
+      phone: "+91 00000 00000"
     },
     {
-      name: "Mrs. Priya Patel",
-      position: "Program Director",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Expert in program management and community development with focus on education and women empowerment.",
-      email: "priya@narmadalaya.org",
-      phone: "+91 98765 43211",
-      achievements: ["Masters in Development Studies", "15 Years Field Experience", "Women Empowerment Specialist"]
+      name: "Mr. Nilesh Giri",
+      position: "Program Coordinator",
+      image: team2,
+      bio: "Software Developer",
+      email: "nilesh@narmadalaya.org",
+      phone: "+91 00000 00000",    },
+    {
+      name: "Mr. Golu Kewat",
+      position: "Coordinator",
+      image: team3,
+      bio: "Hospitality Management and supervision of mid-day meals",
+      email: "golu@narmadalaya.org",
+      phone: "+91 00000 00000",
     },
     {
-      name: "Mr. Amit Kumar",
-      position: "Education Head",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Passionate educator dedicated to providing quality education to underprivileged children.",
-      email: "amit@narmadalaya.org",
-      phone: "+91 98765 43212",
-      achievements: ["M.Ed in Educational Leadership", "Teacher Training Expert", "Curriculum Development"]
-    },
-    {
-      name: "Dr. Meera Singh",
+      name: "Mr. Hemandra Rathor",
       position: "Healthcare Coordinator",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Medical professional ensuring healthcare reaches the most vulnerable communities.",
-      email: "meera@narmadalaya.org",
-      phone: "+91 98765 43213",
-      achievements: ["MBBS, MD Community Medicine", "Rural Healthcare Expert", "Public Health Specialist"]
+      image: team4,
+      bio: "Warden and Teacher",
+      email: "Hemandra@narmadalaya.org",
+      phone: "+91 00000 00000",
     },
     {
-      name: "Mr. Suresh Gupta",
-      position: "Finance Manager",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Ensuring financial transparency and efficient resource management for maximum impact.",
-      email: "suresh@narmadalaya.org",
-      phone: "+91 98765 43214",
-      achievements: ["CA, CFA", "NGO Finance Expert", "Audit & Compliance Specialist"]
+      name: "Mr. Shankar Kewat",
+      position: "Coordinator",
+      image: team5,
+      bio: "Fabrication of shades and electrical maintenance",
+      email: "shankar@narmadalaya.org",
+      phone: "+91 00000 00000",
     },
     {
-      name: "Ms. Kavya Joshi",
-      position: "Communications Manager",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-      bio: "Spreading awareness about our mission and connecting with supporters worldwide.",
-      email: "kavya@narmadalaya.org",
-      phone: "+91 98765 43215",
-      achievements: ["Masters in Mass Communication", "Digital Marketing Expert", "PR Specialist"]
+      name: "Mr. Jitendra Kewat",
+      position: "Coordinator",
+      image: team6,
+      bio: "Construction and Maintenance",
+      email: "jitendra@narmadalaya.org",
+      phone: "+91 00000 00000",
     }
   ];
 
@@ -155,7 +155,7 @@ const Team = () => {
                     <p className="text-orange-600 font-medium mb-3">{member.position}</p>
                     <p className="text-gray-600 leading-relaxed mb-4">{member.bio}</p>
                     
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
                       <h4 className="font-semibold text-gray-900">Key Achievements:</h4>
                       <ul className="space-y-1">
                         {member.achievements.map((achievement, idx) => (
@@ -165,7 +165,7 @@ const Team = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
                   </CardContent>
                 </Card>
               ))}
