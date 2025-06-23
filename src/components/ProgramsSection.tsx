@@ -5,50 +5,51 @@ import { GraduationCap, Heart, TreePine, Users, Award, Camera } from "lucide-rea
 import { Link } from "react-router-dom";
 
 const ProgramsSection = () => {
-  const programs = [
-    {
-      icon: GraduationCap,
-      title: "Narmadalaya",
-      description: "“Informal educational centres started in 2010 with only 14 students in Lepa village. This activity is meant...",
-      image: "https://www.narmadalaya.org/main/img/narmadalaya_home.jpg",
-      link: "#"
-    },
-    {
-      icon: Heart,
-      title: "Ramkrishna Sarda Niketan",
-      description: "First School with vocational training in Nimar Region in Madhya Pradesh...",
-      image: "https://www.narmadalaya.org/main/img/rksn/rksn.jpg",
-      link: "#"
-    },
-    {
-      icon: TreePine,
-      title: "Ramkrishna Technical Institute",
-      description: "A rural technology Centre has been set up in 2016. Training in Plumbing, Carpentering, Welding..",
-      image: "https://www.narmadalaya.org/main/img/rit/rit.jpg",
-      link: "#"
-    },
-    {
-      icon: Users,
-      title: "Narmada Nirmiti",
-      description: "An initiative to empower village womenfolk",
-      image: "https://www.narmadalaya.org/main/img/nirmiti/3.png",
-      link: "#"
-    },
-    {
-      icon: Award,
-      title: "Goshala",
-      description: "he Goshala was donated by Sant Rajgiri baba to us in 2014 with 6 cows. Presently 21 Nimari breed cows..",
-      image: "https://www.narmadalaya.org/main/img/goshala/goshala.jpg",
-      link: "#"
-    },
-    {
-      icon: Camera,
-      title: "Narmada Swar Lahri",
-      description: "Narmada Swar Lahari is a musical orchestra of students of Ramkrishna Sarda Niketan. They are...",
-      image: "https://www.narmadalaya.org/main/img/lahari/lahri.jpg",
-      link: "#"
-    }
-  ];
+
+const programs = [
+  {
+    icon: GraduationCap,
+    title: "Narmadalaya",
+    description: "Narmadalaya is a spiritually inspired service mission dedicated to uplifting rural communities in the Nimar Region. Since 2010, we provide free formal and non-formal education from preschool to high school across 15 villages. We empower local women as educators and promote vocational skills, health awareness, and environmental responsibility for sustainable development.",
+    image: "https://www.narmadalaya.org/main/img/narmadalaya_home.jpg",
+    link: "#"
+  },
+  {
+    icon: Heart,
+    title: "Ramkrishna Sarda Niketan",
+    description: "Ramkrishna Sarda Niketan was started at Lepa Punarvas in April 2015 to provide quality education to children from economically weaker sections. With branches at Bhattyan and Chhoti Khargone, the school offers free education, vocational training, meals, and uniforms. Our students excel in academics, sports, music, and vocational skills.",
+    image: "https://www.narmadalaya.org/main/img/rksn/rksn.jpg",
+    link: "#"
+  },
+  {
+    icon: TreePine,
+    title: "VIVEKANANDA INSTITUTE OF RURAL TECHNOLOGY (VIRT)",
+    description: "VIRT was established at Lepa Punarvas in May 2015 as a Rural Technology Training Center. We offer a two-year diploma in Basic Rural Technology affiliated with NIOS. Our program provides practical skills to rural youth, with 10 students currently undergoing training in sustainable rural technologies.",
+    image: "https://www.narmadalaya.org/main/img/rit/rit.jpg",
+    link: "#"
+  },
+  {
+    icon: Users,
+    title: "Narmada Nirmiti",
+    description: "Narmada Nirmiti was launched in 2015 to support widows and deserted women through tailoring training. 25 women have earned diplomas and gained self-reliance. The unit now produces quilts and garments and participates in exhibitions across Maharashtra, empowering women through skill-building and financial independence.",
+    image: "https://www.narmadalaya.org/main/img/nirmiti/3.png",
+    link: "#"
+  },
+  {
+    icon: Award,
+    title: "Goshala",
+    description: "The Goshala, donated by Sant Rajgiri Baba in 2014, now shelters 31 cows supporting the milk needs of our students. We promote sustainable farming through a gobar gas plant, vermi compost, organic farming, and hydroponics. This reflects our commitment to rural development and eco-friendly practices.",
+    image: "https://www.narmadalaya.org/main/img/goshala/goshala.jpg",
+    link: "#"
+  },
+  {
+    icon: Camera,
+    title: "Narmada Swar Lahri",
+    description: "Narmada Swar Lahri is a student orchestra trained by classical singer Mrs. Shubhada Marathe. They perform Sanskrit stotras, folk songs, and awareness pieces on Narmada conservation. The group has performed at RBI Mumbai, Bharatiya Vidya Bhavan, and Rally for Rivers, showcasing rich local culture.",
+    image: "https://www.narmadalaya.org/main/img/lahari/lahri.jpg",
+    link: "#"
+  }
+];
 
   return (
     <section className="py-20 bg-white">

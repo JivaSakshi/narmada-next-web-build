@@ -56,7 +56,7 @@ const Events = () => {
       title: "Guru purnima 2024",
       date: "November 15, 2024",
       location: "Narmadalaya, Lepa Punarwas",
-      description: "Skill development and entrepreneurship workshop for women in rural areas.",
+      description: "We celebrated the Guru Purnima festival on 3rd July. Parents of the students studying in the school also attended the program . On behalf of the Narmadalaya family, every family attending the program was gifted with a photo of Thakur ji, Swami ji and Sarada Maa.",
       attendees: "120",
       image: pastEvents2,
       category: "Regional"
